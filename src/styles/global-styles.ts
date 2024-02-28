@@ -8,6 +8,7 @@ const styles = css({
     borderWidth: 0,
     borderStyle: 'solid',
     borderColor: 'currentColor',
+    minWidth: 0,
   },
   'html, :host': {
     lineHeight: 1.5,
@@ -23,6 +24,10 @@ const styles = css({
   body: {
     margin: 0,
     lineHeight: 'inherit',
+    height: '100%',
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
   },
   hr: {
     height: 0,
@@ -156,6 +161,11 @@ const styles = css({
   },
   '[hidden]': {
     display: 'none',
+  },
+  '#root': {
+    height: '100%',
+    flexGrow: 1,
+    display: 'flex',
   },
 });
 
