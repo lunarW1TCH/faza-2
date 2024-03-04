@@ -10,20 +10,19 @@ const styles = css({
     borderColor: 'currentColor',
     minWidth: 0,
   },
-  'html, :host': {
+  html: {
     lineHeight: 1.5,
     WebkitTextSizeAdjust: '100%',
     MozTabSize: 4,
     tabSize: 4,
-    fontFamily:
-      'Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+    fontFamily: 'Inter',
     fontFeatureSettings: 'normal',
     fontVariationSettings: 'normal',
     WebkitTapHighlightColor: 'transparent',
+    minHeight: '100%',
   },
   body: {
     margin: 0,
-    lineHeight: 'inherit',
     height: '100%',
     minHeight: '100vh',
     display: 'flex',
@@ -34,9 +33,6 @@ const styles = css({
     color: 'inherit',
     borderTopWidth: '1px',
   },
-  'abbr:where([title])': {
-    textDecoration: 'underline dotted',
-  },
   'h1, h2, h3, h4, h5, h6': {
     fontSize: 'inherit',
     fontWeight: 'inherit',
@@ -45,30 +41,12 @@ const styles = css({
     color: 'inherit',
     textDecoration: 'inherit',
   },
-  'b, strong': {
-    fontWeight: 'bolder',
-  },
   'code, kbd, samp, pre': {
     fontFamily:
       'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     fontFeatureSettings: 'normal',
     fontVariationSettings: 'normal',
     fontSize: '1em',
-  },
-  small: {
-    fontSize: '80%',
-  },
-  'sub, sup': {
-    fontSize: '75%',
-    lineHeight: 0,
-    position: 'relative',
-    verticalAlign: 'baseline',
-  },
-  sub: {
-    bottom: '-0.25em',
-  },
-  sup: {
-    top: '-0.5em',
   },
   table: {
     textIndent: 0,
@@ -162,10 +140,10 @@ const styles = css({
   '[hidden]': {
     display: 'none',
   },
-  '#root': {
-    height: '100%',
-    flexGrow: 1,
+  main: {
     display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
   },
 });
 

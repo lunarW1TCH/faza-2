@@ -5,7 +5,7 @@ import styles from './styles/global-styles.ts';
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementsByTagName('body')[0]!).render(
   <React.StrictMode>
     <Global styles={styles} />
     <RouterProvider router={router} />

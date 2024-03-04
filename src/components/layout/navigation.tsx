@@ -1,4 +1,4 @@
-import LinkButton from './link-button';
+import LinkButton from '../ui/link-button';
 
 const Navigation = () => {
   return (
@@ -8,13 +8,16 @@ const Navigation = () => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        borderBottom: 'solid 1px #eeeeee',
+        marginTop: '8px',
+        marginBottom: '8px',
+        marginLeft: '16px',
+        marginRight: '16px',
       }}
     >
       <LinkButton to='/'>Home</LinkButton>
-      <LinkButton to='/todo1'>TODO1</LinkButton>
-      <LinkButton to='/todo2'>TODO2</LinkButton>
-      <LinkButton to='/todo3'>TODO3</LinkButton>
+      <LinkButton to='/todo1'>Todo 1</LinkButton>
+      <LinkButton to='/todo2'>Todo 2</LinkButton>
+      <LinkButton to='/todo3'>Todo 3</LinkButton>
     </nav>
   );
 };
