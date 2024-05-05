@@ -25,7 +25,7 @@ export const COLORS = {
   a10: '#0000007C',
   a11: '#0000009B',
   a12: '#000000DF',
-};
+} as const;
 
 export const SEMANTIC_COLORS = {
   bg: {
@@ -49,4 +49,7 @@ export const SEMANTIC_COLORS = {
     disabled: COLORS[5],
     outline: COLORS.a9,
   },
-};
+  accent: {
+    ...COLORS,
+  },
+} as const;

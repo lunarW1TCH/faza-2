@@ -1,4 +1,7 @@
 import { defineConfig } from 'vite';
+import Pages from 'vite-plugin-pages';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
 import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
@@ -6,5 +9,9 @@ export default defineConfig({
     react({
       jsxImportSource: '@emotion/react',
     }),
+    Pages({
+      dirs: [{ dir: 'src/pages', baseRoute: '' }],
+    }),
+    tsconfigPaths(),
   ],
 });

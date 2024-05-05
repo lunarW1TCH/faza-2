@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+
 import { Global } from '@emotion/react';
+
+import App from './app.tsx';
 import styles from './styles/global-styles.ts';
-import { RouterProvider } from 'react-router-dom';
-import router from './router';
 
 ReactDOM.createRoot(document.getElementsByTagName('body')[0]!).render(
   <React.StrictMode>
     <Global styles={styles} />
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );

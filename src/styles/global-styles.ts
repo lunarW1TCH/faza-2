@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { SEMANTIC_COLORS } from './colors';
+
 // based on preflight designed by tailwindcss teams
 
 const styles = css({
@@ -20,6 +22,9 @@ const styles = css({
     fontVariationSettings: 'normal',
     WebkitTapHighlightColor: 'transparent',
     minHeight: '100%',
+    MozOsxFontSmoothing: 'grayscale',
+    textRendering: 'optimizeLegibility',
+    WebkitFontSmoothing: 'antialiased',
   },
   body: {
     margin: 0,
@@ -27,6 +32,8 @@ const styles = css({
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
+    backgroundColor: SEMANTIC_COLORS.bg.canvas,
+    color: SEMANTIC_COLORS.fg.default,
   },
   hr: {
     height: 0,
@@ -143,7 +150,10 @@ const styles = css({
   main: {
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
     flexGrow: 1,
+    alignItems: 'center',
+    backgroundColor: SEMANTIC_COLORS.bg.subtle,
   },
 });
 
