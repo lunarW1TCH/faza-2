@@ -4,6 +4,7 @@ import { SEMANTIC_COLORS } from '../colors';
 import CONDITIONS from '../tokens/conditions';
 import DURATIONS from '../tokens/durations';
 import EASINGS from '../tokens/easings';
+import FONT_WEIGHTS from '../tokens/font-weights';
 import RADII from '../tokens/radii';
 import SIZES from '../tokens/sizes';
 import SPACING from '../tokens/spacing';
@@ -14,7 +15,7 @@ const base = css({
   appearance: 'none',
   cursor: 'pointer',
   display: 'inline-flex',
-  fontWeight: 'semibold',
+  fontWeight: FONT_WEIGHTS.semibold,
   justifyContent: 'center',
   outline: 'none',
   borderRadius: RADII.l2,
@@ -59,9 +60,32 @@ const ghost = css({
   },
 });
 
+const solid = css({
+  backgroundColor: SEMANTIC_COLORS.fg.default,
+  color: SEMANTIC_COLORS.bg.default,
+  [CONDITIONS._hover]: {
+    backgroundColor: '#303030',
+  },
+  [CONDITIONS._focusVisible]: {
+    outline: '2px solid',
+    outlineColor: SEMANTIC_COLORS.fg.default,
+    outlineOffset: '2px',
+  },
+  [CONDITIONS._disabled]: {
+    color: SEMANTIC_COLORS.fg.disabled,
+    backgroundColor: SEMANTIC_COLORS.bg.disabled,
+    cursor: 'not-allowed',
+    [CONDITIONS._hover]: {
+      color: SEMANTIC_COLORS.fg.disabled,
+      backgroundColor: SEMANTIC_COLORS.bg.disabled,
+    },
+  },
+});
+
 const buttonRecipe = {
   base,
   ghost,
+  solid,
 };
 
 export default buttonRecipe;
