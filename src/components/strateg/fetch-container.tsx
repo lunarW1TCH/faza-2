@@ -17,6 +17,7 @@ import linkRecipe from '../../styles/recipes/link';
 import VStack from '../containers/v-stack';
 import LoadingFallback from '../loading-fallback';
 import BarGraph from './bar-graph';
+import ErrorFallback from './error-fallback';
 
 const FetchContainer = (props: FetchContainerProps) => {
   const { url } = props;
@@ -44,9 +45,7 @@ const FetchContainer = (props: FetchContainerProps) => {
   }, [isLoading, data, error]);
 
   if (isLoading) return <LoadingFallback />;
-
-  //TODO
-  if (error || (data && 'message' in data)) return 'error';
+  if (error || (data && 'message' in data)) return <ErrorFallback />;
 
   return (
     <VStack css={{ marginTop: SPACING['4'], marginBottom: SPACING['4'] }}>

@@ -29,13 +29,14 @@ const BarItem = (props: BarItemProps) => {
           },
           backgroundColor: SEMANTIC_COLORS.fg.default,
           zIndex: 10,
-          borderRadiusTop: RADII.sm,
           transition:
             'background-color 0.3s ease-in-out, width 0.3s ease-in-out',
           position: 'relative',
           justifyContent: 'center',
           display: 'flex',
           marginBottom: '200px',
+          borderTopLeftRadius: RADII.sm,
+          borderTopRightRadius: RADII.sm,
         }}
         style={{ height: value * 4 }}
       />
