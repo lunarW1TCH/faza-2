@@ -1,0 +1,10 @@
+:root {
+  --semantic-fg-muted: #646464;
+}
+
+.description {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--semantic-fg-muted);
+  text-align: center;
+}

@@ -11,11 +11,15 @@ import linkRecipe from '../styles/recipes/link';
 const Root = () => {
   return (
     <VStack css={{ height: '100%' }}>
-      <div css={[cardRecipe.root, css({ minWidth: '300px' })]}>
+      <div
+        css={[cardRecipe.root, css({ minWidth: '300px', maxWidth: '300px' })]}
+      >
         <div css={cardRecipe.header}>
           <h3 css={cardRecipe.title}>Faza 2</h3>
+          <p css={cardRecipe.description}>Aplikacja fazy 2 do pracy:</p>
           <p css={cardRecipe.description}>
-            Aplikacja fazy 2 do pracy {'"..."'}
+            Wpływ wybranych technologii webowych na działanie aplikacji w ujęciu
+            biznesowym
           </p>
         </div>
         <div css={cardRecipe.body}>
@@ -29,8 +33,13 @@ const Root = () => {
           </h5>
           <HStack css={{ width: '100%', justifyContent: 'space-between' }}>
             <span>Faza 1:</span>
-            <a css={[linkRecipe, css({ textDecoration: 'underline' })]}>
-              todo.vercel.app
+            <a
+              target='_blank'
+              rel='noreferrer noopener'
+              href='https://lunaf1.draganczuk.cloud'
+              css={[linkRecipe, css({ textDecoration: 'underline' })]}
+            >
+              lunaf1.draganczuk.cloud
             </a>
           </HStack>
           <HStack css={{ width: '100%', justifyContent: 'space-between' }}>

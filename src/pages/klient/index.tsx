@@ -25,6 +25,11 @@ const Klient = () => {
         ref={nameRef}
       />
       <button
+        onClick={() => {
+          if (!nameRef.current) return;
+          setName(nameRef.current.value);
+          nameRef.current.value = '';
+        }}
         css={[
           buttonRecipe.base,
           buttonRecipe.solid,
@@ -32,11 +37,6 @@ const Klient = () => {
             width: '200px',
           },
         ]}
-        onClick={() => {
-          if (!nameRef.current) return;
-          setName(nameRef.current.value);
-          nameRef.current.value = '';
-        }}
       >
         Akceptuj
       </button>
